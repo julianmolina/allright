@@ -1,12 +1,22 @@
-
-
 /**
- * 
+ * ////////////////////////////////////////////
+ * // This library try emulate any frameworks php sintax,
+ * // we was inspirated for phalcon framework with it struct
+ * // and PHQL syntax.
+ * //
+ * //
+ * //
+ * ////////////////////////////////////////////
+ * @author Julian Arturo Molina Castiblanco 
+ * @author Esteban Vera
+ * @version 0.1 beta
+ * @copyright open-source
  */
 function Orm(){
 
 	/**
 	 *
+	 * 
 	 */
 	this.json;
 
@@ -28,20 +38,18 @@ function Orm(){
 	 *
 	 */
 	this.fetchJson = function (url){
-			var ajaxObj = "";;
-			ajaxObj = $.ajax({
-							url: url,
-			                async: false,
-							dataType:'json',
-							type:'json'
-							//success: function (json){
-							//	jsons = json;
-							//}
-						}).done(function (j){
-							return j;
-						});
 
-			this.json = ajaxObj.responseJSON;
+		var ajaxObj = "";
+		ajaxObj = $.ajax({
+		 			 url: url,
+		             async: false,
+					 dataType:'json',
+					 type:'json'
+				   }).done(function (j){
+						return j;
+				   });
+
+		this.json = ajaxObj.responseJSON;
 	};
 
 	this.fetchAll = function (){
@@ -113,7 +121,7 @@ function findClass(){
 	this.join = function(){
 
 	};
-
+	return this.dataOriginal;
 }
 
 /**

@@ -4,6 +4,7 @@
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="allright.js"></script>
 	<script type="text/javascript">
+
 		var orm = new Orm();
 		var res = "";
 		orm.fetchJson("data.php");
@@ -11,11 +12,11 @@
 		/**
 		 * Aquí metale los parametros que quiere, mire el data php, primero columna y después valor como está ahí
 		 */
-		result = orm.fetchAll().where({curso:'js', nombre:'julian26'});
-		var ff = 'nombre';
+		result = orm.fetchAll();
 		$.each(result, function (i, item){
 			document.write(item.ff+" - "+item.apellido+" - "+item.curso+"<br>");
 		});
+
 	</script>
 </head>
 
